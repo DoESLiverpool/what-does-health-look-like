@@ -45,3 +45,14 @@ Have a couple of processing sketches to visualise data -
 
 Laura will incorporate some of the sensors into things to make them more robust for wearing, and will develop a few other sensors, which then feed data into the same visualisations.
 
+
+## Budget
+
+Laura to research sensors and work with dancers 2 days @£300 £600
+Progammer 2 days @ £300 £600
+Workshop materials £500
+refreshments £60
+Materials for work with dancers £500
+Contribution to Does space £100
+
+Total £2,360 
