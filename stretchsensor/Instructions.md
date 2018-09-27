@@ -1,4 +1,4 @@
-# Connecting a Pressure Sensor 
+# Connecting a Pressure Sensor to a Microbit
 
 You need the pair of wires with hoops soldered on the ends and the knitted stretch sensor.
 
