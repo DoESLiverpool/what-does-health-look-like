@@ -13,6 +13,8 @@ Cut the loose ends of the yarn
 
 ![IMG_3145.jpg](IMG_3145.jpg)
 
+Connect a 100ohm resistor between 
+
 ![IMG_3146.jpg](IMG_3146.jpg)
 
 ![IMG_3148.jpg](IMG_3148.jpg)
