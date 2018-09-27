@@ -6,6 +6,7 @@ You need the pair of wires with hoops soldered on the ends and the knitted stret
 
 Tie one end of the stretch sensor onto one of the hoops on  one of the wires. 
 Then repeat with the other end of the stretch sensor to the other hoop on the second wire.  
+Make sure your knots are tight enough so that when you pull on the senosor they won't come undone.  
 
 ![IMG_3142.jpg](IMG_3142.jpg)
 
