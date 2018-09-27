@@ -13,7 +13,7 @@ Cut the loose ends of the yarn
 
 ![IMG_3145.jpg](IMG_3145.jpg)
 
-Connect a 100ohm resistor between 
+Connect a 100ohm resistor between Pin 0 and GND using the M3 bolts (as you did with the pressure sensor) 
 
 ![IMG_3146.jpg](IMG_3146.jpg)
 
