@@ -24,6 +24,8 @@ There are Processing libraries in a number of languages—Java, Python, JavaScri
 
 3. Press “Show all” in the “Libraries” section of the sidebar, and press cross next to “p5.serial” to turn it into a tick.
 
+   ![enable p5 serial library](enable-p5-serial.png)
+
 4. Replace the starter code with this:
 
 ```js
