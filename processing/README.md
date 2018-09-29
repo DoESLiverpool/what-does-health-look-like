@@ -16,6 +16,8 @@ There are Processing libraries in a number of languages—Java, Python, JavaScri
 
    **If you’re on a PC,** [download this Zip file](https://github.com/vanevery/p5.serialcontrol/releases/download/0.0.5/p5.serialcontrol-win32-x64.zip) and run the `p5.serialcontrol.exe` from inside it. When it opens, you will need to press the Escape button twice, until you see the full interface appear in the window.
 
+   **If you're on Linux,** [check out these instructions](https://github.com/vanevery/p5.serialport#p5serial-nodejs)
+
 ## Writing the Processing code
 
 1. Create an account on [openprocessing.org](https://openprocessing.org) by pressing the “Join” button and entering your details.
