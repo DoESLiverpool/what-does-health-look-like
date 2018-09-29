@@ -68,6 +68,7 @@ function setup () {
     // Remove the Bluetooth device that appears on a Mac
     list = list.filter(function (device) {
       return device.indexOf('Bluetooth-Incoming-Port') === -1
+      // return device.indexOf('*.usbmodem*') !== -1 Alternative to make sure we ignore any ports that are *not* microbit
     })
 
     if (list.length) {
@@ -118,5 +119,7 @@ function keyPressed() {
   }
 }
 ```
-
-5. If you have problems, make sure you’re using Chrome. Firefox and Safari will block the websocket connection from p5.serialcontrol, but Chrome is less picky.
+<img src="https://user-images.githubusercontent.com/128456/46250372-9c541d80-c431-11e8-95e5-19d30990d36e.png" width=400>
+5. Return to your **makecode** window and add a `Serial Write Number` block and then insert an `analog read pin P0` block into the `number` space. Save this amended `.hex` file and upload it to your microbit
+6. If you have problems, make sure your `p5.serialcontrol` app is running in the background and that you’re using Chrome. Firefox and Safari will block the websocket connection from p5.serialcontrol, but Chrome is less picky.
+7. If you still have problems you could try uncommenting the alternative way of ignoring things like the bluetooth port in the line `// return device.indexOf('*.usbmodem*') !== -1 ` and commenting (adding `//` at the front) out the other line.
