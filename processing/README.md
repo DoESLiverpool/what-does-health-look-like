@@ -18,13 +18,17 @@ There are Processing libraries in a number of languages—Java, Python, JavaScri
 
    **If you're on Linux,** [check out these instructions](https://github.com/vanevery/p5.serialport#p5serial-nodejs)
 
+4. It’s a good idea to use Chrome or Edge for this project. Firefox and Safari will block the websocket connection from p5.serialcontrol, but Chrome and Edge are less picky.
+
 ## Writing the Processing code
 
 1. Create an account on [openprocessing.org](https://openprocessing.org) by pressing the “Join” button and entering your details.
 
 2. Once you’re signed up / logged in, press “Create a sketch”
 
-3. Press “Show all” in the “Libraries” section of the sidebar, and press cross next to “p5.serial” to turn it into a tick.
+3. Press “Show all” in the “Libraries” section of the sidebar, and press the **cross** next to “p5.serial” to turn it into a **tick**.
+
+   ![enable p5 serial library](enable-p5-serial.png)
 
 4. Replace the starter code with this:
 
