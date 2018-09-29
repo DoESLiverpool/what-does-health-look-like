@@ -1,64 +1,24 @@
-# what-does-health-look-like
+# What Does Health Look Like
 
-Eventbrite for running the event...  30?  Maybe some more to allow for drop-offs
+Learn how to create a simple, wearable movement tracker using a Microbit.
 
-Kids must be accompanied, and aged 8 and above.
+We'll use its inbuilt accelerometer to measure movements and generate unique visual outputs depending on how you move. You'll also have the opportunity to build handmade soft sensors to measure pressure and stretch and explore how they could be used to measure movement and be incorporated into garments.
 
-Half-day?  1:30pm onwards
+We'll take the data we collect and visualise it using Processing. You'll then be able to choose a visualisation and print it on a T-shirt which you can take with you.
 
-Bring a laptop (if you've haven't got one let us know beforehand and we'll see what we can work out).
+  * No specialist knowledge or technical skills necessary
 
-If you want to, you can install Processing beforehand
+  * Bring a laptop (if you can't then please let us know beforehand and we'll see what we can work out)
 
-Assume people are going to work in pairs.
+  * We'll be using the openprocessing.org to write Processing code in JavaScript – don’t worry, it’s not as scary as it sounds!
 
+  * Suitable for adults and children of 8 and over. All children must be accompanied by an adult
 
-## Shopping List
+This workshop is a collaboration between Dr David Ellis of Lancaster University, Laura Pullig and DoES Liverpool as part of the 'Get a Move on Network' funded by the EPSRC (Engineering and Physcial Sciences Research Council). 
 
-* Buy some microbits - 10 maybe?
-* Velostat
-* Reel of neopixels
-* Crocodile clip leads
-* Ways to attach things to people?  Velcro? 
-* IR/ultrasonic distance sensor
-* T-shirts?  One baby t-shirt
+## Instructions
 
-## Inputs...
-Accelerometer on the microbit? - accelerometer attached to your shoe
+ * [Pressure sensor](pressure-sensor)
+ * [Stretch sensor](stretchsensor)
+ * [Processing](processing)
 
-Then choice from...
-
-Velostat pressure sensor
-
-Knitted stretch sensor https://tactile-electronics.tumblr.com/post/112332704495/textile-sensors-circular-knit-stretch-sensor-a - measure bicep curls, or knee bends
-Light sensor on the microbit, and then enhance it with a IR/ultrasonic distance sensor - press-ups,
-
-## Output...
-
-Instantaneous feedback on the microbit - strip of neopixels
-
-Stream numbers over serial to a serial monitor graph (written in processing)?
-
-Have a couple of processing sketches to visualise data -
-
-## Dancers...
-
-Laura will incorporate some of the sensors into things to make them more robust for wearing, and will develop a few other sensors, which then feed data into the same visualisations.
-
-
-## Budget
-
-Laura to research sensors and work with dancers 2 days @£300 £600
-
-Progammer 2 days @ £300 £600
-
-Workshop materials £500
-
-refreshments £60
-
-Materials for work with dancers £500
-
-Contribution to Does space £100
-
-
-Total £2,360 
