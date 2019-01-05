@@ -1,10 +1,18 @@
-#include <WiFi.h>
 #include <PubSubClient.h>
-#include <Wire.h>
+// Include the correct WiFi header file for the board we're running on
+// This code will work for ESP8266, ESP32 and Arduino MKRWIFI1010
+#if defined(ESP8266)
+#include <ESP8266WiFi.h>
+#elif defined(ESP32)
+#include <WiFi.h>
+#elif defined(ARDUINO_SAMD_MKRWIFI1010)
+#include <WiFiNINA.h>
+#include <SFU.h>
+#endif
 
 // Replace the next variables with your SSID/Password combination
-const char* ssid = "DoESLiverpool";
-const char* password = "decafbad00";
+char* ssid = "DoESLiverpool";
+char* password = "decafbad00";
 
 //const char* mqtt_server = "10.0.39.179";
 
@@ -20,7 +28,7 @@ char msg[50];
 int value = 0;
 unsigned long lastMillis = 0;
 
-const int presPin = 36;
+const int presPin = A0; //36;
 long presValue = 0;
 
 void connect() {
