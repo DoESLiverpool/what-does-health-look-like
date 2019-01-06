@@ -7,7 +7,6 @@
 #include <WiFi.h>
 #elif defined(ARDUINO_SAMD_MKRWIFI1010)
 #include <WiFiNINA.h>
-#include <SFU.h>
 #endif
 
 // Replace the next variables with your SSID/Password combination
@@ -21,7 +20,7 @@ const char* mqtt_server = "broker.mqtt-dashboard.com";
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-char hexMAC[3+12+1] = "espxxxxxxxxxxxx"; // length of "esp" + 12 bytes for MAC + 1 byte '\0' terminator 
+char hexMAC[3 + 12 + 1] = "espxxxxxxxxxxxx"; // length of "esp" + 12 bytes for MAC + 1 byte '\0' terminator
 uint8_t mac[6];
 
 char msg[50];
@@ -29,7 +28,10 @@ int value = 0;
 unsigned long lastMillis = 0;
 
 const int presPin = A0; //36;
-long presValue = 0;
+const int presPin2 = A2; 
+
+long presValue =  0;
+long presValue2 = 0;
 
 void connect() {
   Serial.print("checking wifi...");
@@ -40,7 +42,7 @@ void connect() {
 
   Serial.print("\nconnecting...");
   //while (!client.connect("arduino", "try", "try")) {
-    while (!client.connect(hexMAC)) {
+  while (!client.connect(hexMAC)) {
     Serial.print(".");
     delay(1000);
   }
@@ -79,14 +81,14 @@ void setup_wifi() {
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
-  
+
   WiFi.macAddress(mac);
-  
-  for (int i =0; i < 6; i++)
+
+  for (int i = 0; i < 6; i++)
   {
-    hexMAC[3+i*2] = hex_digit(mac[i]>>4);
-    hexMAC[3+i*2+1] = hex_digit(mac[i] & 0x0f);
-  } 
+    hexMAC[3 + i * 2] = hex_digit(mac[i] >> 4);
+    hexMAC[3 + i * 2 + 1] = hex_digit(mac[i] & 0x0f);
+  }
   Serial.println(hexMAC);
 }
 void reconnect() {
@@ -119,23 +121,28 @@ void reconnect() {
 long lastMsg = 0;
 
 void loop() {
-    
+
   client.loop();
   delay(10);  // <- fixes some issues with WiFi stability
 
   if (!client.connected()) {
     connect();
   }
-  
+
   long now = millis();
   if (now - lastMillis > 50) {
     lastMillis = now;
     presValue = analogRead(presPin);
-    Serial.println(presValue);
-   // Convert the value to a char array
-    char tempString[8];    
-    dtostrf(presValue, 1, 0, tempString);
-    client.publish("mcqn/test", tempString);
+    presValue2 = analogRead(presPin2);
+    // Convert the value to a char array
+    String tempString;
+    tempString = presValue;
+    tempString += ':';
+    tempString += presValue2;
+    char tempChar[tempString.length() + 1];
+    tempString.toCharArray(tempChar, tempString.length() + 1);
+    Serial.println(tempChar);
+    client.publish("mcqn/test", tempChar);
   }
 }
 
@@ -150,4 +157,4 @@ char hex_digit(uint8_t aValue)
   {
     return 'x';
   }
-} 
+}
