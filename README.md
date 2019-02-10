@@ -22,3 +22,11 @@ This workshop is a collaboration between Dr David Ellis of Lancaster University,
  * [Stretch sensor](stretchsensor)
  * [Processing](processing)
 
+## Other Code Sketches
+
+ * [sensor_mqtt_publish](sensor_mqtt_publish) - code to publish sensor readings over WiFi using the MQTT protocol.  The [MQTT-socketio-Bridge](https://github.com/mcqn/mqtt-socketio-bridge) shows how to get the resultant data into a `p5js` sketch to visualise it.
+ * [mqtt_neopixel_visualiser](mqtt_neopixel_visualiser) - code to visualise the sensor data from `sensor_mqtt_publish` on a neopixel ring
+
+## Recorded Data
+
+The [data](data) folder holds some recordings of data from experiments with `sensor_mqtt_publish`
