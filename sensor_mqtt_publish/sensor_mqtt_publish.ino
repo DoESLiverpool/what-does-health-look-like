@@ -7,6 +7,10 @@
 #include <WiFi.h>
 #elif defined(ARDUINO_SAMD_MKRWIFI1010)
 #include <WiFiNINA.h>
+#elif defined(ARDUINO_SAMD_MKR1000)
+#include <WiFi101.h>
+#else
+#error "Chosen board not implemented.  WiFi won't work yet"
 #endif
 
 // Replace the next variables with your SSID/Password combination
@@ -137,7 +141,7 @@ void loop() {
     // Convert the value to a char array
     String tempString;
     tempString = presValue;
-    tempString += ':';
+    tempString += ',';
     tempString += presValue2;
     char tempChar[tempString.length() + 1];
     tempString.toCharArray(tempChar, tempString.length() + 1);
