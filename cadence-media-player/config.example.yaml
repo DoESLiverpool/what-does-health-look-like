@@ -1,0 +1,4 @@
+testing: true
+mqtt:
+  url: 'mqtt://broker.mqtt-dashboard.com'
+  topic: 'mcqn/#'
