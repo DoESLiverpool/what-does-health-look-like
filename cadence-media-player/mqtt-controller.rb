@@ -14,6 +14,22 @@ else
   exit
 end
 
+# Find the audio files
+encouragement_dir = "./audio/encourage/"
+congratulations_dir = "./audio/congratulate/"
+encouragement = []
+congratulations = []
+Dir.foreach(encouragement_dir) do |f|
+  if File.extname(f) == ".wav"
+    encouragement.push(encouragement_dir+f)
+  end
+end
+Dir.foreach(congratulations_dir) do |f|
+  if File.extname(f) == ".wav"
+    congratulations.push(congratulations_dir+f)
+  end
+end
+
 # Keep track of the extremities of values reported
 highest = [0,0]
 lowest = [123456,123456]
@@ -64,13 +80,13 @@ MQTT::Client.connect(settings['mqtt']['url']) do |c|
       reached_cadence = true
       puts "####################### WELL DONE!"
       # Congratulate the rider
-      Process.spawn("aplay ./audio/congratulate/AbsolutelyKillingIt.wav")
+      Process.spawn("aplay #{congratulations.sample}")
     end
     # See if they've slowed down too much
     if cadence < encouragement_cadence and reached_cadence
       reached_cadence = false
       # Encourage them to cycle faster
-      Process.spawn("aplay ./audio/encourage/YouCanDoIt.wav")
+      Process.spawn("aplay #{encouragement.sample}")
     end
       
     last_digital[0] = digital[0]
